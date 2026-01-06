@@ -1,8 +1,9 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Search, ShoppingCart, Menu, X, Heart, ChevronRight, Star, Filter } from 'lucide-react';
 
-function App() {
+export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [cartCount, setCartCount] = useState(0);
@@ -628,7 +629,7 @@ function App() {
         </div>
       </footer>
 
-      <style>{`
+      <style jsx>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -643,5 +644,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
